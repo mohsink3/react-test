@@ -25,8 +25,6 @@ const RecipeDetails = () => {
 
         if(recipe == null){
             return <h2>no data </h2>
-        }else{
-            data = response.json()
         }
 
     return (
