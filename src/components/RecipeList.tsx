@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 interface Recipe {
     name: string;
@@ -25,6 +26,7 @@ const RecipeList = () => {
         <div className="container mt-5">
             <div className="row cols-cols row-cols-md-3">
                 {
+
                     recipes.map((recipe, index) => (
                         <div className="col">
                             <div key={index}>
@@ -33,7 +35,7 @@ const RecipeList = () => {
                                     <h5 className="card-title">{recipe.name}</h5>
                                     <p className="card-text">{recipe.prepTime}</p>
                                     <p className="card-text">{recipe.cuisine}</p>
-
+                                    <Link className="btn btn-outline-primary" to={`/recipes/${recipe.id}`}>🍴{recipe.name}</Link>
                                 </div>
                             </div>
                         </div>
