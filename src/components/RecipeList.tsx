@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 interface Recipe {
+    id: number;
     name: string;
     cuisine: string;
     prepTime: string;
@@ -36,6 +37,7 @@ const RecipeList = () => {
                                     <p className="card-text">{recipe.prepTime}</p>
                                     <p className="card-text">{recipe.cuisine}</p>
                                     <Link className="btn btn-outline-primary" to={`/recipes/${recipe.id}`}>🍴{recipe.name}</Link>
+
                                 </div>
                             </div>
                         </div>
